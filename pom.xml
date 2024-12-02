@@ -3,18 +3,24 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Basic project information -->
     <groupId>com.example</groupId>
-    <artifactId>my-java-project</artifactId>
+    <artifactId>java-with-maven</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>My Java Project</name>
+    <name>Java with Maven</name>
+    <description>Java project for CI/CD testing with Maven</description>
+    <url>http://www.example.com</url>
 
+    <!-- Build properties -->
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <!-- Dependencies -->
     <dependencies>
-        <!-- Add your project dependencies here -->
+        <!-- Example dependency for testing -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -22,4 +28,20 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <!-- Build configuration -->
+    <build>
+        <plugins>
+            <!-- Compiler plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
